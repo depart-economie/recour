@@ -23,6 +23,8 @@
     .status{margin-top:16px;padding:13px 15px;border-radius:14px;display:none;line-height:1.7}.ok{display:block;background:#ecfdf5;color:#047857;border:1px solid #a7f3d0}.err{display:block;background:#fef2f2;color:#b91c1c;border:1px solid #fecaca}
     .footer{text-align:center;color:#64748b;font-size:13px;margin-top:18px}.hint{font-size:12px;color:#64748b;margin-top:5px}
     @media(max-width:720px){.grid{grid-template-columns:1fr}.hero h1{font-size:24px}.card{padding:18px;border-radius:22px}}
+    .calc{background:linear-gradient(135deg,#f59e0b,#d97706);color:white;box-shadow:0 10px 20px rgba(217,119,6,.35)}
+    .calc:hover{transform:translateY(-2px);box-shadow:0 15px 25px rgba(217,119,6,.45)}
   </style>
 </head>
 <body>
@@ -53,11 +55,26 @@
           <div><label>رقم خيار التخصص الذي وُجّه إليه الطالب <span class="req">*</span></label><select name="assignedChoiceRank" required><option value="">اختر</option><option>الخيار الأول</option><option>الخيار الثاني</option><option>الخيار الثالث</option><option>الخيار الرابع</option><option>الخيار الخامس</option><option>لم يكن ضمن الاختيارات</option></select></div>
           <div class="full"><label>سبب الطعن <span class="req">*</span></label><textarea name="appealReason" required placeholder="اشرح سبب الطعن بوضوح..."></textarea></div>
         </div>
-        <div class="actions"><button class="btn primary" type="submit" id="submitBtn">إرسال الطعن</button><button class="btn ghost" type="reset">مسح البيانات</button></div>
+        <div class="actions">
+
+    <button class="btn primary" type="submit" id="submitBtn">
+         إرسال الطعن
+    </button>
+
+    <button class="btn ghost" type="reset">
+         مسح البيانات
+    </button>
+
+    <button class="btn calc" type="button"
+            onclick="window.location.href='calcul_moyenne_classement.html';">
+         حساب المعدل الترتيبي
+    </button>
+
+</div>
         <div id="status" class="status"></div>
       </form>
     </div>
-    <div class="footer">© منصة الطعون — العلوم الاقتصادية</div>
+    <div class="footer">© منصة الطعون — قسم العلوم الاقتصادية</div>
   </main>
 
   <script>
